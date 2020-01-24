@@ -41,10 +41,4 @@ describe('day_02', () => {
       expect(getFirstElement(evaluated)).to.equal(4462686)
     })
   })
-
-  describe('second part', () => {
-    it('example 1', () => {
-      return true
-    })
-  })
 })
