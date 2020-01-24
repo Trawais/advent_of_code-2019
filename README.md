@@ -4,16 +4,18 @@
 
 Solution of Advent of Code for the year 2019 written in JavaScript.
 All solution is executed as a set of unit tests.
-Jest is used as a test executor.
+Mocha is used as a test executor and chai's expect for assertions.
 
 ## Build
-`npm i`
+`npm install`
 
 ## Run
 ### All tasks
 `npm run test`
 ### One task
-`npx jest ./day_{{number_of_task}}`
+`npx mocha --grep  day_01`
 
-## Lint your code
+## Code quality
+
+### Lint the code
 `npm run lint`
