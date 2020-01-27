@@ -13,7 +13,7 @@ Mocha is used as a test executor and chai's expect for assertions.
 ### All tasks
 `npm run test`
 ### One task
-`npx mocha --grep  day_01`
+`npx mocha --grep day_01`
 
 ## Code quality
 

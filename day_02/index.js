@@ -37,9 +37,26 @@ export function evalString(input) {
   return stack.toString()
 }
 
-export function prepare1202(input) {
+export function injectNounAndVerb(input, noun, verb) {
   const stack = getStack(input)
-  stack[1] = 12
-  stack[2] = 2
+  stack[1] = noun
+  stack[2] = verb
   return stack.toString()
+}
+
+export function secondPart(input, expectedResult) {
+  const nouns = Array.from(Array(100).keys())
+  const verbs = Array.from(Array(100).keys())
+  let result = -1
+
+  nouns.some((noun) => verbs.some((verb) => {
+    const tempResult = getFirstElement(evalString(injectNounAndVerb(input, noun, verb)))
+    if (tempResult === expectedResult) {
+      result = noun * 100 + verb
+      return true
+    }
+    return false
+  }))
+
+  return result
 }
